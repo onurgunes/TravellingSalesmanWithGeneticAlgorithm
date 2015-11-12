@@ -16,3 +16,12 @@ cities = [ Gene("istanbul", 0, 0),
            Gene("gaziantep", 20, 45),
            Gene("bursa", 10, 15),
            Gene("artvin", 0, 80)]
+
+GENERATION = 1000
+MUTATION = 0.05
+POPULATION_SIZE = 100
+CHROMOSOME_SIZE = len(cities) + 1
+
+generation_count = 0
+while generation_count < GENERATION:
+    generation_count += 1

@@ -1,7 +1,7 @@
 __author__ = 'OnurGunes'
 
 
-class Gene:
+class Gene(object):
     """
         Class That Represent Gene
     """

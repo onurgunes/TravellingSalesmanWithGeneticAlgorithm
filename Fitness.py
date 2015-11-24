@@ -2,7 +2,7 @@ __author__ = 'OnurGunes'
 import Chromosome
 
 
-class Fitness:
+class Fitness(object):
     """
         Operations about fitness function
     """

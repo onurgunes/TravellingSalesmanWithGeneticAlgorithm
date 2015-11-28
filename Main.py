@@ -7,6 +7,7 @@ from Population import *
 import random
 
 def main():
+    
     # alphabet
     cities = [ Gene("istanbul", 0, 0),
                Gene("ankara", 20, 30),
@@ -19,12 +20,15 @@ def main():
                Gene("artvin", 0, 80)]
 
     GENERATION = 1000
-    MUTATION = 0.05
+    MUTATION_RATE = 0.05
     POPULATION_SIZE = 100
     CHROMOSOME_SIZE = len(cities) + 1
+
+    population = []
 
     generation_count = 0
     while generation_count < GENERATION:
         generation_count += 1
+
 
 main()

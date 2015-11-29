@@ -15,8 +15,8 @@ def crossover(chromosome1, chromosome2):
 	"""
 
 
-
 def mutate(chromosome):
 	"""
 	mutation operation : swap two genes in chromosome
 	"""
+	

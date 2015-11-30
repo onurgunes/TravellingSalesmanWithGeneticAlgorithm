@@ -10,8 +10,6 @@ class Chromosome(object):
 	genes = []
 	
 	def __init__(self, genes):
-		"""
-		"""
 		self.genes = genes
 
 	def get_fitness(self):
@@ -23,11 +21,12 @@ def generate_chromosome(genes):
     generate new chromosomes
     """
 
-def crossover(chromosome1, chromosome2):
+def crossover(chromosome):
 	"""
 	crossover operation : swap a part of chromosome1 with a part of chromosome2
+	Note: In the TSA problem, traveller must visit each city once but, with crossing over, it is hard to provide. Therefore, I preferred to use mutating operation three times instead of classic crossing over operation.
 	"""
-	randint(0, len(chromosome1.genes))
+	return mutate(mutate(mutate(chromosome)))
 
 def mutate(chromosome):
 	"""

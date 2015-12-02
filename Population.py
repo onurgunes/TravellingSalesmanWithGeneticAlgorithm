@@ -3,5 +3,20 @@ __author__ = 'OnurGunes'
 
 class Population(object):
 
-    def __init__(self, genes):
-        self.population_list = genes
+	population_list = []
+
+	def get_fittest(self):
+		"""
+		"""
+
+	def add_individual(self, chromosome):
+		"""
+		"""
+		
+	def delete_individual(self, index):
+		"""
+		"""
+
+	def populate(self, limit):
+		"""
+		"""

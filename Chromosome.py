@@ -1,6 +1,7 @@
 __author__ = 'OnurGunes'
 
 from random import randint
+from random import shuffle
 from Fitness import *
 
 class Chromosome(object):
@@ -8,23 +9,31 @@ class Chromosome(object):
 
 	fitness = 0
 	genes = []
-	
+
 	def __init__(self, genes):
+		
 		self.genes = genes
 
 	def get_fitness(self):
-		fitness = Fitness().calculate_fitness(self)
-		return fitness
+		"""
+		get fitness value of chromosome
+		"""
+		return Fitness().calculate_fitness(self)
 
 def generate_chromosome(genes):
-    """
-    generate new chromosomes
-    """
+	"""
+	generate new chromosomes
+	"""
+	temp = genes[1:]
+	shuffle(temp)
+	genes[1:] = temp
+	return genes
 
 def crossover(chromosome):
 	"""
 	crossover operation : swap a part of chromosome1 with a part of chromosome2
-	Note: In the TSA problem, traveller must visit each city once but, with crossing over, it is hard to provide. Therefore, I preferred to use mutating operation three times instead of classic crossing over operation.
+	Note: In the TSA problem, traveller must visit each city once but, with crossing over, it is hard to provide.
+	Therefore, I preferred to use mutating operation three times instead of classic crossing over operation.
 	"""
 	return mutate(mutate(mutate(chromosome)))
 

@@ -4,7 +4,7 @@ __author__ = 'OnurGunes'
 import unittest
 import sys
 sys.path.append("..")
-from Gene import *
+import Gene
 
 class Gene_Test(unittest.TestCase):
 

@@ -33,7 +33,9 @@ def generate_chromosome(genes):
 	for i in range(len(temp)):
 		new_gene.append(temp[i])
 
-	return new_gene
+	new_chromosome = Chromosome(new_gene)
+	new_chromosome.get_fitness()
+	return new_chromosome
 
 def crossover(chromosome):
 	"""

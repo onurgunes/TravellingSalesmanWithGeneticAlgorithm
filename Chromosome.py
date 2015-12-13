@@ -18,7 +18,8 @@ class Chromosome(object):
 		"""
 		get fitness value of chromosome
 		"""
-		return Fitness().calculate_fitness(self)
+		self.fitness = Fitness().calculate_fitness(self)
+		return self.fitness
 
 def generate_chromosome(genes):
 	"""

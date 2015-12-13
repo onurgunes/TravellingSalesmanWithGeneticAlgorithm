@@ -1,5 +1,6 @@
 __author__ = 'OnurGunes'
 
+from random import random
 from random import randint
 from random import shuffle
 from Fitness import *
@@ -11,7 +12,6 @@ class Chromosome(object):
 	genes = []
 
 	def __init__(self, genes):
-		
 		self.genes = genes
 
 	def get_fitness(self):
@@ -26,8 +26,13 @@ def generate_chromosome(genes):
 	"""
 	temp = genes[1:]
 	shuffle(temp)
-	genes[1:] = temp
-	return genes
+
+	new_gene = []
+	new_gene.append(genes[0])
+	for i in range(len(temp)):
+		new_gene.append(temp[i])
+
+	return new_gene
 
 def crossover(chromosome):
 	"""

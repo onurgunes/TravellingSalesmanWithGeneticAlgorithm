@@ -50,5 +50,8 @@ class Population(object):
 
 	def delete_unfit_individuals(self, limit):
 		self.order_by_fit()
-		for index in xrange(limit, len(self.population)):
-			del self.population[index]
+		
+		i = len(self.population) - limit
+
+		for x in xrange(0,i):
+			self.population.pop()

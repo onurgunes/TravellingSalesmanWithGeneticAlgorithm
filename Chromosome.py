@@ -3,6 +3,7 @@ __author__ = 'OnurGunes'
 from random import random
 from random import randint
 from random import shuffle
+import copy
 from Fitness import *
 
 class Chromosome(object):
@@ -43,12 +44,18 @@ def crossover(chromosome):
 	Note: In the TSA problem, traveller must visit each city once but, with crossing over, it is hard to provide.
 	Therefore, I preferred to use mutating operation three times instead of classic crossing over operation.
 	"""
-	return mutate(mutate(mutate(chromosome)))
+
+	y = mutate(copy.deepcopy(chromosome))
+	x = mutate(copy.deepcopy(y))
+	z = mutate(copy.deepcopy(x))
+	z.get_fitness()
+	return z
 
 def mutate(chromosome):
 	"""
 	mutation operation : swap two genes in chromosome
 	"""
+
 	mutation_point_1 = 0
 	mutation_point_2 = 0
 
